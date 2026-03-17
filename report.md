@@ -1,33 +1,42 @@
 # Customer Support Chatbot Evaluation Report
 
 ## 1. Introduction
-This project evaluates a local LLM (Llama 3.2 3B via Ollama) for e-commerce customer support.
-We compare **zero-shot** and **one-shot** prompting techniques.
+This project builds an offline chatbot using Ollama and Llama 3.2.
+The goal is to compare zero-shot and one-shot prompting techniques.
 
 ## 2. Methodology
-- 20 e-commerce queries adapted from Ubuntu Dialogue Corpus.
-- Zero-shot: Prompt contains only instructions + query.
-- One-shot: Prompt contains instructions + one example + query.
-- Responses were scored on **Relevance, Coherence, Helpfulness** (1-5).
+- 20 e-commerce queries were used.
+- Zero-shot: instructions only.
+- One-shot: instructions + 1 example.
+- Evaluation based on:
+  - Relevance
+  - Coherence
+  - Helpfulness
 
-## 3. Results Summary
-| Prompting Method | Avg Relevance | Avg Coherence | Avg Helpfulness |
-|-----------------|---------------|---------------|----------------|
-| Zero-Shot       | 4.5           | 4.8           | 4.3            |
-| One-Shot        | 4.8           | 5.0           | 4.7            |
+## 3. Results
+(Write your averages here after scoring)
 
-*(Replace with your actual scores)*
+Example:
+- Zero-Shot:
+  - Relevance: 4.4
+  - Coherence: 4.7
+  - Helpfulness: 4.2
+
+- One-Shot:
+  - Relevance: 4.8
+  - Coherence: 5.0
+  - Helpfulness: 4.7
 
 ## 4. Analysis
-- One-shot prompts generally produced more **consistent and helpful responses**.
-- Zero-shot responses were sometimes vague or lacked actionable steps.
-- One-shot helps the model understand **tone and format** better.
+- One-shot responses are more structured and helpful.
+- Zero-shot responses sometimes lack detail.
+- One-shot improves tone and consistency.
 
-## 5. Conclusion & Limitations
-- Llama 3.2 3B is **capable for offline customer support**.
+## 5. Conclusion
+- Local LLM works well for basic support tasks.
 - Limitations:
-  - Cannot access real-time order data.
-  - Responses may hallucinate if not guided.
-  - Slower on CPU compared to cloud GPUs.
-- Next steps: fine-tune with actual store data, multi-turn conversation support.
-ss
+  - No real-time order data
+  - Possible incorrect answers
+- Future improvements:
+  - Add database integration
+  - Multi-turn conversations
